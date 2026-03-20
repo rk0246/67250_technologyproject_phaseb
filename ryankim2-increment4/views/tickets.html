@@ -18,56 +18,57 @@
     <meta name="description" content="MonoMuse website redesign project" />
     <title>MonoMuse</title>
   </head>
-  <body>
-    <header>
-      <img
-        id="logo"
-        src="../static/monomuselogo.png"
-        alt="MonoMuse Museum Logo"
-        width="392px"
-        height="67px"
-      />
-      <nav>
+  <div class="container">
+    <body>
+      <header class="header">
+        <img
+          id="logo"
+          src="../static/monomuselogo.png"
+          alt="MonoMuse Museum Logo"
+          width="392px"
+          height="67px"
+        />
+      </header>
+      <nav class="nav_bar">
         <a href="../index.html">Home</a>
         <a href="explore.html">Explore</a>
         <a href="exhibitions.html">Exhibitions</a>
         <a id="navselected" href="tickets.html">Tickets</a>
         <a href="checkout.html">Checkout</a>
       </nav>
-    </header>
-    <div class="ticket-table">
-      <table>
-        <tr>
-          <th>Ticket Type</th>
-          <th>Description</th>
-          <th>$Price$</th>
-        </tr>
-        <tr>
-          <td>Adult</td>
-          <td>
-            General admission for visitors ages 18 and over. Under 18 free of
-            charge.
-          </td>
-          <td>$18</td>
-        </tr>
-        <tr>
-          <td>Student</td>
-          <td>Student ID required</td>
-          <td>$10</td>
-        </tr>
-        <tr>
-          <td>Member</td>
-          <td>Member ID required</td>
-          <td>$15</td>
-        </tr>
-      </table>
-    </div>
-  </body>
-  <footer>
+      <main class="main">
+        <table>
+          <tr>
+            <th>Ticket Type</th>
+            <th>Description</th>
+            <th>$Price$</th>
+          </tr>
+          <tr>
+            <td>Adult</td>
+            <td>
+              General admission for visitors ages 18 and over. Under 18 free of
+              charge.
+            </td>
+            <td>$18</td>
+          </tr>
+          <tr>
+            <td>Student</td>
+            <td>Student ID required</td>
+            <td>$10</td>
+          </tr>
+          <tr>
+            <td>Member</td>
+            <td>Member ID required</td>
+            <td>$15</td>
+          </tr>
+        </table>
+      </main>
+      <figure class="main_figure"></figure>
+    </body>
     <footer>
       <span>&copy;</span>
       <span id="copyYear"></span>
       <span>MonoMuse. All rights reserved.</span>
     </footer>
-  </footer>
+  </div>
 </html>
