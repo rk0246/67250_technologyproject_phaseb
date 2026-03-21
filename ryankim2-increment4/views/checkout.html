@@ -34,19 +34,22 @@
         <a href="explore.html">Explore</a>
         <a href="exhibitions.html">Exhibitions</a>
         <a id="cta" href="tickets.html">Tickets</a>
-        <a id="navselected" href="checkout.html">Checkout</a>
+        <a href="checkout.html">Checkout</a>
       </nav>
       <main class="main">
-        <form>
-          <label>Name: (required)<input type="text" name="name" /></label
-          ><br /><br />
-          <label>Email: (required)<input type="email" name="email" /></label
-          ><br /><br />
-          <label
-            >Ticket Quantity: (required)<input
-              type="number"
-              name="quantity" /></label
-          ><br /><br />
+        <form style="display: none" id="checkoutForm">
+          <label>Name: (required)</label>
+          <input type="text" name="name" />
+          <br /><br />
+
+          <label>Email: (required)</label>
+          <input type="email" name="email" />
+          <br /><br />
+
+          <label>Ticket Quantity: (required)</label>
+          <input type="number" name="quantity" />
+          <br /><br />
+
           <button type="submit">Submit</button>
         </form>
       </main>

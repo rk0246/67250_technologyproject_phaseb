@@ -25,7 +25,7 @@ nav a:hover {
   border-color: #4d5c3b;
 }
 
-#navselected {
+.active {
   color: #92ad70;
 }
 
@@ -44,13 +44,13 @@ footer {
   color: rgba(245, 245, 247, 0.72);
 }
 
-th {
+#ticketprice th {
   padding-top: 12px;
   padding-bottom: 12px;
   width: fit-content;
 }
 
-tr:nth-child(even) td {
+#ticketprice tr:nth-child(even) td {
   background-color: #f2f2f2;
   color: #0b0b0c;
 }
@@ -60,6 +60,9 @@ form {
   text-align: center;
 }
 
+#checkoutForm {
+  display: none;
+}
 .container {
   display: grid;
   grid-template-areas:
@@ -73,6 +76,8 @@ form {
 }
 .nav_bar {
   grid-area: nav_bar;
+  display: flex;
+  justify-content: right;
 }
 .main {
   grid-area: main;
@@ -80,6 +85,13 @@ form {
 .main_figure {
   grid-area: main-img;
 }
+
+.main-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
 .footer {
   grid-area: footer;
 }

@@ -50,6 +50,40 @@ function addYear() {
   document.getElementById("copyYear").innerHTML = year;
 }
 
+activeNav();
+
+function activeNav() {
+  const navLinks = document.querySelectorAll("nav li a");
+
+  navLinks.forEach((link) => {
+    if (link.href === window.location.href) {
+      link.classList.add("active");
+    }
+  });
+}
+
+// When the "Read Less" button is clicked
+$("#readLess").click(function () {
+  $("#longText").hide(); // Hide the long introduction text
+  $("#readLess").hide(); // Hide the "Read Less" button itself
+  $("#readMore").show(); // Show the "Read More" button
+});
+
+// When the "Read More" button is clicked
+$("#readMore").click(function () {
+  $("#longText").show(); // Show the long introduction text
+  $("#readLess").show(); // Show the "Read Less" button
+  $("#readMore").hide(); // Hide the "Read More" button
+});
+
+function showCheckout() {
+  document.getElementById("checkoutForm").style.display = "block";
+}
+
+function submitCheckout() {
+  alert("redirceting to payment system...");
+}
+
 /*L1 = ["Watermelon", "Pineapple", "Pear", "Banana"];
 L2 = ["Apple", "Banana", "Kiwi", "Orange"];
 

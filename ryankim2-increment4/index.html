@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
     <script src="./static/script.js" defer></script>
     <link rel="stylesheet" href="./static/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,12 +37,16 @@
         <a id="navselected" href="index.html">Home</a>
         <a href="./views/explore.html">Explore</a>
         <a href="./views/exhibitions.html">Exhibitions</a>
-        <a id="cta" href="./views/tickets.html">Tickets</a>
-        <a href="./views/checkout.html">Checkout</a>
+        <a id="cta" href="./views/buytickets.html">Tickets</a>
+        <!-- <a href="checkout.html">Checkout</a> -->
       </nav>
       <main class="main">
         <h2 id="greeting">Welcome to MonoMuse</h2>
-        <p>
+        <p id="shortText">
+          Discover the intersection of art, technology, and human creativity at
+          MonoMuse!
+        </p>
+        <p id="longText" style="display: none">
           MonoMuse is a contemporary museuem dedicated to exploring the
           intersection of art, technology, and human creativity. Through
           immersive exhibitions, interactice installations, and rotating
@@ -49,7 +58,9 @@
           cutting-edge exhibitions, hands-on experiences, and events designed to
           inspire curiosity and creativity.
         </p>
-        <a href="./views/tickets.html">Buy Tickets</a>
+        <button id="readMore">Read More</button>
+        <button id="readLess" style="display: none">Read Less</button>
+        <a href="./views/buytickets.html">Buy Tickets</a>
       </main>
       <figure class="main_figure"></figure>
     </body>
