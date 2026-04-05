@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../static/script.js" defer></script>
+
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="author" content="Ryan Kim" />
+    <meta
+      name="keywords"
+      content="Museum, Carnegie Mellon University, Information Systems"
+    />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MonoMuse</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img
+          id="logo"
+          src="../static/monomuselogo.png"
+          alt="MonoMuse Museum Logo"
+          width="392px"
+          height="67px"
+        />
+      </header>
+      <nav class="nav_bar" id="navbar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a id="cta" href="buytickets.html"><span>Tickets</span></a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          ☰
+        </a>
+        <!-- <a href="checkout.html">Checkout</a> -->
+      </nav>
+      <main class="main">
+        <div class="exhibit">
+          <div class="exhibit-text">
+            <h3>Exhibition 1: The Black Album Controversy</h3>
+            <p>
+              This exhibition explores the release of Metallica’s self-titled
+              1991 album, widely known as "The Black Album," and the controversy
+              that followed. Marking a shift from the band’s fast, aggressive
+              thrash metal roots to a more polished and accessible sound, the
+              album sparked debate among fans and critics. While some praised
+              its production quality and mainstream appeal, others felt
+              Metallica had abandoned their original style. Featuring iconic
+              tracks like "Enter Sandman," "Nothing Else Matters," and "The
+              Unforgiven," the exhibition examines how this pivotal moment
+              redefined the band’s identity. Visitors will explore fan
+              reactions, critical responses, and how the album ultimately became
+              one of the best-selling records of all time despite initial
+              backlash.
+            </p>
+          </div>
+          <figure>
+            <img src="../static/black-album.jpg" alt="Metallica Black Album" />
+            <figcaption>The Black Album (1991)</figcaption>
+          </figure>
+        </div>
+
+        <div class="exhibit">
+          <div class="exhibit-text">
+            <h3>Exhibition 2: Global Impact and Legacy</h3>
+            <p>
+              This exhibition highlights Metallica’s rise to global dominance
+              and their lasting influence on music and culture. Over decades,
+              the band has sold millions of records, performed in sold-out
+              stadiums worldwide, and built one of the most dedicated fan bases
+              in history. From pioneering thrash metal to evolving their sound
+              across generations, Metallica has remained at the forefront of the
+              industry. Visitors can explore their worldwide tours, cultural
+              impact, and contributions beyond music, including philanthropy and
+              innovation in the digital age. The exhibition showcases how
+              Metallica’s legacy continues to shape modern rock and metal,
+              solidifying their place as one of the most influential bands of
+              all time.
+            </p>
+          </div>
+          <figure>
+            <img
+              src="../static/metallica-members.jpg"
+              alt="Metallica Members"
+              height="300px"
+            />
+            <figcaption>Metallica Members</figcaption>
+          </figure>
+        </div>
+        <footer class="footer">
+          <span>&copy;</span>
+          <span id="copyYear"></span>
+          <span>MonoMuse. All rights reserved.</span>
+        </footer>
+        <figure class="main_figure"></figure>
+      </main>
+    </div>
+  </body>
+</html>

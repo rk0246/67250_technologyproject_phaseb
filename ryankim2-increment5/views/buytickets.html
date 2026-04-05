@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../static/script.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="author" content="Ryan Kim" />
+    <meta
+      name="keywords"
+      content="Museum, Carnegie Mellon University, Information Systems"
+    />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MonoMuse</title>
+  </head>
+  <div class="container">
+    <body>
+      <header class="header">
+        <img
+          id="logo"
+          src="../static/monomuselogo.png"
+          alt="MonoMuse Museum Logo"
+          width="392px"
+          height="67px"
+        />
+      </header>
+      <nav class="nav_bar" id="navbar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="buytickets.html">Tickets</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          ☰
+        </a>
+        <!-- <a href="checkout.html">Checkout</a> -->
+      </nav>
+      <main class="main">
+        <div class="main-content">
+          <div class="calendar">
+            <table id="ticketcalendar">
+              <caption>
+                March 2026
+              </caption>
+              <tr>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div class="ticket-table">
+            <table id="ticketprice">
+              <tr>
+                <th>Ticket Type</th>
+                <th>Description</th>
+                <th>Price</th>
+              </tr>
+              <tr>
+                <td>Adult</td>
+                <td>
+                  General admission for visitors ages 18 and over. Under 18 free
+                  of charge.
+                </td>
+                <td>$18</td>
+              </tr>
+              <tr>
+                <td>Student</td>
+                <td>Student ID required</td>
+                <td>$10</td>
+              </tr>
+              <tr>
+                <td>Member</td>
+                <td>Member ID required</td>
+                <td>$15</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <button onclick="showCheckout()">Buy Now</button>
+        <form id="checkoutForm">
+          <label>
+            Name (required)
+            <input type="text" id="name" required />
+          </label>
+          <br /><br />
+
+          <label>
+            Email (required)
+            <input type="email" id="email" required />
+          </label>
+          <br /><br />
+
+          <label>
+            Visit Date (required)
+            <input type="date" id="date" required />
+          </label>
+          <br /><br />
+
+          <label>
+            Ticket Type (required)
+            <select id="ticketType" required>
+              <option value="">Select</option>
+              <option value="adult">Adult ($18)</option>
+              <option value="student">Student ($10)</option>
+              <option value="member">Member ($15)</option>
+            </select>
+          </label>
+          <br /><br />
+
+          <label>
+            Ticket Quantity (1–10)
+            <input type="number" id="quantity" min="1" max="10" required />
+          </label>
+          <br /><br />
+
+          <label>
+            Zip Code (optional)
+            <input type="text" id="zip" />
+          </label>
+          <br /><br />
+
+          <label>
+            <input type="checkbox" id="subscribe" />
+            Join our mailing list
+          </label>
+          <br /><br />
+
+          <p>Total: $<span id="totalPrice">0</span></p>
+          <p id="errorMsg" style="color: red"></p>
+
+          <button type="submit">Place Order</button>
+        </form>
+      </main>
+    </body>
+    <footer>
+      <span>&copy;</span>
+      <span id="copyYear"></span>
+      <span>MonoMuse. All rights reserved.</span>
+    </footer>
+  </div>
+</html>

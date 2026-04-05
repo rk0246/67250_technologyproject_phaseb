@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="../static/script.js" defer></script>
+
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="author" content="Ryan Kim" />
+    <meta
+      name="keywords"
+      content="Museum, Carnegie Mellon University, Information Systems"
+    />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MonoMuse</title>
+  </head>
+  <div class="container">
+    <body>
+      <header class="header">
+        <img
+          id="logo"
+          src="../static/monomuselogo.png"
+          alt="MonoMuse Museum Logo"
+          width="392px"
+          height="67px"
+        />
+      </header>
+      <nav class="nav_bar" id="navbar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a id="cta" href="tickets.html">Tickets</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          ☰
+        </a>
+      </nav>
+      <main class="main">
+        <form style="display: none" id="checkoutForm">
+          <label>Name: (required)</label>
+          <input type="text" name="name" />
+          <br /><br />
+
+          <label>Email: (required)</label>
+          <input type="email" name="email" />
+          <br /><br />
+
+          <label>Ticket Quantity: (required)</label>
+          <input type="number" name="quantity" />
+          <br /><br />
+
+          <button type="submit">Submit</button>
+        </form>
+      </main>
+      <figure class="main_figure"></figure>
+    </body>
+    <footer class="footer">
+      <span>&copy;</span>
+      <span id="copyYear"></span>
+      <span>MonoMuse. All rights reserved.</span>
+    </footer>
+  </div>
+</html>
