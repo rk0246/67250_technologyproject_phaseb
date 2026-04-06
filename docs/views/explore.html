@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- jQuery Library (used for DOM manipulation and event handling)
+     Source: https://jquery.com/ -->
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
+    <script src="../static/script.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css" />
+
+    <!-- Google Fonts (used for typography: Roboto, Nunito, Geologica)
+     Source: https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Leaflet.js (used for interactive maps)
+     Source: https://leafletjs.com/ -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <meta name="author" content="Ryan Kim" />
+    <meta
+      name="keywords"
+      content="Museum, Carnegie Mellon University, Information Systems"
+    />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MonoMuse</title>
+  </head>
+  <div class="container-explore">
+    <body>
+      <!-- Header -->
+      <header class="header">
+        <img
+          id="logo"
+          src="../static/monomuselogo.png"
+          alt="MonoMuse Museum Logo"
+          width="392px"
+          height="67px"
+        />
+      </header>
+
+      <!-- Navigation -->
+      <nav class="nav_bar" id="navbar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a id="cta" href="buytickets.html"><span>Tickets</span></a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          ☰
+        </a>
+        <!-- <a href="checkout.html">Checkout</a> -->
+      </nav>
+
+      <!-- Main Content -->
+      <main class="main">
+        <!-- Hero Image -->
+        <img
+          src="../static/MonoMuseExterior.png"
+          alt="Exterior of MonoMuse Metallica Museum in Los Angeles, CA"
+        />
+
+        <!-- Map Section -->
+        <div class="map-section">
+          <div class="map-info">
+            <h2>Visit MonoMuse</h2>
+            <p>
+              <strong>Address:</strong> 221 S Grand Ave, Los Angeles, CA 90012
+            </p>
+            <p><strong>Hours:</strong> Mon–Sun: 10AM – 6PM</p>
+            <p><strong>Contact:</strong> info@monomuse.com</p>
+          </div>
+          <div id="map"></div>
+        </div>
+
+        <!-- Mission -->
+        <h2>Our Mission</h2>
+        <p>
+          At MonoMuse, our mission is to celebrate the legacy, influence, and
+          evolution of Metallica, exploring how their music has shaped culture
+          and redefined the boundaries of heavy metal. We are dedicated to
+          showcasing immersive exhibitions that highlight the band’s journey,
+          from their thrash metal roots to their global impact. Through
+          interactive experiences, live-performance simulations, and multimedia
+          storytelling, we aim to engage visitors with the energy, innovation,
+          and artistry that define Metallica. MonoMuse is a space for fans and
+          newcomers alike to connect with the band's music, history, and
+          enduring influence on the world of rock and beyond.
+        </p>
+        <br></br>
+
+        <!-- Milestones -->
+        <h2>Milestones</h2>
+        <ul>
+          <li>2020: MonoMuse Grand Opening</li>
+          <li>
+            2021: Launch of the first Metallica-themed interactive exhibition
+          </li>
+          <li>
+            2022: Expansion of immersive experiences, including live performance
+            simulations
+          </li>
+          <li>
+            2023: Introduction of global exhibits highlighting Metallica’s
+            cultural impact
+          </li>
+          <li>
+            2024: Renovation of digital and multimedia installations for a fully
+            immersive museum experience
+          </li>
+        </ul>
+      </main>
+
+      <!-- Spotify Section -->
+      <div class="spotify-section">
+        <h2>Listen to Metallica</h2>
+
+        <!-- Spotify -->
+        <iframe
+          src="https://open.spotify.com/embed/artist/2ye2Wgw4gimLv2eAKyk1NB"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <span>&copy;</span>
+        <span id="copyYear"></span>
+        <span>MonoMuse. All rights reserved.</span>
+      </footer>
+    </body>
+  </div>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- jQuery Library (used for DOM manipulation and event handling)
+     Source: https://jquery.com/ -->
+    <script
+      src="https://code.jquery.com/jquery-4.0.0.min.js"
+      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./static/script.js" defer></script>
+    <link rel="stylesheet" href="./static/style.css" />
+    <!-- Google Fonts (used for typography: Syne font)
+     Source: https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="author" content="Ryan Kim" />
+    <meta
+      name="keywords"
+      content="Museum, Carnegie Mellon University, Information Systems"
+    />
+    <meta name="description" content="MonoMuse website redesign project" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MonoMuse</title>
+  </head>
+  <div class="container">
+    <body>
+      <!-- Header -->
+      <header class="header">
+        <img
+          id="logo"
+          src="./static/monomuselogo.png"
+          alt="MonoMuse Museum Logo"
+          width="392px"
+          height="67px"
+        />
+      </header>
+
+      <!-- Navigation -->
+      <nav class="nav_bar" id="navbar">
+        <a id="navselected" href="index.html">Home</a>
+        <a href="./views/explore.html">Explore</a>
+        <a href="./views/exhibitions.html">Exhibitions</a>
+        <a id="cta" href="./views/buytickets.html"><span>Tickets</span></a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">☰</a>
+      </nav>
+
+      <!-- Slideshow -->
+      <div class="slideshow">
+        <img
+          class="slide"
+          src="./static/slide1.jpg"
+          alt="Metallica members performing on stage"
+          height="600px"
+        />
+        <img
+          class="slide"
+          src="./static/slide2.jpg"
+          alt="Birds eye view of a large crowd at a Metallica concert"
+          height="600px"
+        />
+        <img
+          class="slide"
+          src="./static/slide3.jpg"
+          alt="Metallica practice session in a studio"
+          height="600px"
+        />
+
+        <button onclick="prevSlide()">❮</button>
+        <button onclick="nextSlide()">❯</button>
+      </div>
+
+      <!-- Main Content -->
+      <main class="main">
+        <h2 id="greeting">Welcome to MonoMuse</h2>
+
+        <!-- Intro -->
+        <p id="shortText">
+          Step into MonoMuse’s Metallica experience, where raw energy, heavy
+          riffs, and cultural impact collide. Explore the band that redefined
+          metal and changed music forever!
+        </p>
+
+        <!-- Expandable Content -->
+        <p id="longText" style="display: none">
+          From their thrash metal roots to their global domination, Metallica
+          has continuously pushed the boundaries of sound and performance.
+          Through groundbreaking albums like the Black Album, electrifying live
+          performances, and a fiercely loyal fan base, the band reshaped the
+          landscape of heavy music. This experience dives into their evolution,
+          controversies, and lasting legacy, revealing how Metallica’s music
+          continues to inspire generations and define the spirit of rock
+          worldwide.
+
+          <br /><br />
+          Watch them in action below!
+
+          <!-- YouTube -->
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/2f1Ny74_ou0"
+            title="Metallica: Master of Puppets"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </p>
+
+        <!-- Buttons -->
+        <button id="readMore">Read More</button>
+        <button id="readLess" style="display: none">Read Less</button>
+        <a href="./views/buytickets.html">Buy Tickets</a>
+
+        <!-- Membership -->
+        <h2>Interested in a Membership or Donation?</h2>
+        <p>
+          Support MonoMuse by becoming a member or making a donation during your
+          visit. Guests can sign up for membership directly at the front desk,
+          where our team will walk you through available tiers and benefits.
+          Donations of any amount help us expand our exhibitions, enhance
+          visitor experiences, and continue bringing innovative art and music
+          culture to life. Visit us in person to learn more and become part of
+          the MonoMuse community!
+        </p>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <span>&copy;</span>
+        <span id="copyYear"></span>
+        <span>MonoMuse. All rights reserved.</span>
+      </footer>
+    </body>
+  </div>
+</html>
