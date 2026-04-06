@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- jQuery Library (used for DOM manipulation and event handling)
+     Source: https://jquery.com/ -->
     <script
       src="https://code.jquery.com/jquery-4.0.0.min.js"
       integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
@@ -8,10 +10,12 @@
     ></script>
     <script src="./static/script.js" defer></script>
     <link rel="stylesheet" href="./static/style.css" />
+    <!-- Google Fonts (used for typography: Syne font)
+     Source: https://fonts.google.com/ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
       rel="stylesheet"
     />
     <meta name="author" content="Ryan Kim" />
@@ -26,6 +30,7 @@
   </head>
   <div class="container">
     <body>
+      <!-- Header -->
       <header class="header">
         <img
           id="logo"
@@ -35,47 +40,53 @@
           height="67px"
         />
       </header>
+
+      <!-- Navigation -->
       <nav class="nav_bar" id="navbar">
         <a id="navselected" href="index.html">Home</a>
         <a href="./views/explore.html">Explore</a>
         <a href="./views/exhibitions.html">Exhibitions</a>
         <a id="cta" href="./views/buytickets.html"><span>Tickets</span></a>
-
-        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-          ☰
-        </a>
-        <!-- <a href="checkout.html">Checkout</a> -->
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">☰</a>
       </nav>
+
+      <!-- Slideshow -->
       <div class="slideshow">
         <img
           class="slide"
           src="./static/slide1.jpg"
-          alt="Slide 1"
+          alt="Metallica members performing on stage"
           height="600px"
         />
         <img
           class="slide"
           src="./static/slide2.jpg"
-          alt="Slide 2"
+          alt="Birds eye view of a large crowd at a Metallica concert"
           height="600px"
         />
         <img
           class="slide"
           src="./static/slide3.jpg"
-          alt="Slide 3"
+          alt="Metallica practice session in a studio"
           height="600px"
         />
 
         <button onclick="prevSlide()">❮</button>
         <button onclick="nextSlide()">❯</button>
       </div>
+
+      <!-- Main Content -->
       <main class="main">
         <h2 id="greeting">Welcome to MonoMuse</h2>
+
+        <!-- Intro -->
         <p id="shortText">
           Step into MonoMuse’s Metallica experience, where raw energy, heavy
           riffs, and cultural impact collide. Explore the band that redefined
           metal and changed music forever!
         </p>
+
+        <!-- Expandable Content -->
         <p id="longText" style="display: none">
           From their thrash metal roots to their global domination, Metallica
           has continuously pushed the boundaries of sound and performance.
@@ -87,8 +98,9 @@
           worldwide.
 
           <br /><br />
-          Watch them in action in the video below!
+          Watch them in action below!
 
+          <!-- YouTube -->
           <iframe
             width="560"
             height="315"
@@ -96,13 +108,15 @@
             title="Metallica: Master of Puppets"
             frameborder="0"
             allowfullscreen
-          >
-          </iframe>
+          ></iframe>
         </p>
+
+        <!-- Buttons -->
         <button id="readMore">Read More</button>
         <button id="readLess" style="display: none">Read Less</button>
         <a href="./views/buytickets.html">Buy Tickets</a>
-        <br></br>
+
+        <!-- Membership -->
         <h2>Interested in a Membership or Donation?</h2>
         <p>
           Support MonoMuse by becoming a member or making a donation during your
@@ -114,12 +128,13 @@
           the MonoMuse community!
         </p>
       </main>
-      <figure class="main_figure"></figure>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <span>&copy;</span>
+        <span id="copyYear"></span>
+        <span>MonoMuse. All rights reserved.</span>
+      </footer>
     </body>
-    <footer class="footer">
-      <span>&copy;</span>
-      <span id="copyYear"></span>
-      <span>MonoMuse. All rights reserved.</span>
-    </footer>
   </div>
 </html>

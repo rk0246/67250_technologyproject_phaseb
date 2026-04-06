@@ -1,3 +1,4 @@
+/* Greeting */
 var now = new Date();
 var hours = now.getHours();
 
@@ -13,6 +14,7 @@ function greeting(x) {
   }
 }
 
+/* Footer Year */
 addYear();
 
 function addYear() {
@@ -20,6 +22,7 @@ function addYear() {
   document.getElementById("copyYear").innerHTML = year;
 }
 
+/* Active Navigation */
 activeNav();
 
 function activeNav() {
@@ -37,20 +40,20 @@ function activeNav() {
   });
 }
 
-// When the "Read Less" button is clicked
+/* Read More Toggle */
 $("#readLess").click(function () {
-  $("#longText").hide(); // Hide the long introduction text
-  $("#readLess").hide(); // Hide the "Read Less" button itself
-  $("#readMore").show(); // Show the "Read More" button
+  $("#longText").hide();
+  $("#readLess").hide();
+  $("#readMore").show();
 });
 
-// When the "Read More" button is clicked
 $("#readMore").click(function () {
-  $("#longText").show(); // Show the long introduction text
-  $("#readLess").show(); // Show the "Read Less" button
-  $("#readMore").hide(); // Hide the "Read More" button
+  $("#longText").show();
+  $("#readLess").show();
+  $("#readMore").hide();
 });
 
+/* Checkout Display */
 function showCheckout() {
   document.getElementById("checkoutForm").style.display = "block";
 }
@@ -59,14 +62,16 @@ function submitCheckout() {
   alert("redirceting to payment system...");
 }
 
+/* Mobile Menu */
 function toggleMenu() {
   const nav = document.getElementById("navbar");
 
-  if (!nav) return; // prevents crash
+  if (!nav) return;
 
   nav.classList.toggle("responsive");
 }
 
+/* Slideshow */
 let currentSlide = 0;
 let slides;
 
@@ -92,6 +97,7 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
+/* Map */
 if (document.getElementById("map")) {
   var map = L.map("map").setView([34.0522, -118.2437], 13);
 
@@ -104,6 +110,7 @@ if (document.getElementById("map")) {
   L.marker([34.054466, -118.250565]).addTo(map);
 }
 
+/* Checkout Logic */
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("checkoutForm");
   const quantity = document.getElementById("quantity");
@@ -148,34 +155,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     errorMsg.textContent = "";
 
-    // Required fields
     if (!name || !email || !date || !type || !qty) {
       errorMsg.textContent = "Please fill out all required fields.";
       return;
     }
 
-    // Email validation
     const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     if (!email.match(emailPattern)) {
       errorMsg.textContent = "Invalid email format.";
       return;
     }
 
-    // Zip validation (optional)
     if (zip && !/^\d{5}$/.test(zip)) {
       errorMsg.textContent = "Zip code must be 5 digits.";
       return;
     }
 
-    // ✅ SUCCESS
     const total = qty * getPrice(type);
     alert("Order placed! Total: $" + total);
   });
 });
 
+/* CTA Border Animation */
 function initBorderTrace(btn) {
   const { width, height } = btn.getBoundingClientRect();
-  const r = 16; // must match border-radius
+  const r = 16;
 
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.classList.add("border-svg");
@@ -191,7 +195,6 @@ function initBorderTrace(btn) {
   svg.appendChild(rect);
   btn.prepend(svg);
 
-  // measure after it's in the DOM
   const perimeter = rect.getTotalLength();
   btn.style.setProperty("--perimeter", perimeter);
 }

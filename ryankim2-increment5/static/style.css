@@ -1,26 +1,39 @@
+/* Global Styles */
 * {
   padding: 5px;
   margin: 5px;
   background: #000000;
   color: #ffffff;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: Syne, Helvetica, Arial, sans-serif;
   font-optical-sizing: auto;
   line-height: 1.5;
 }
 
+/* Exhibit Text */
+.exhibit p {
+  text-align: left;
+}
+
+.exhibit h2,
+.exhibit h3 {
+  text-align: left;
+}
+
+/* Typography */
 h2 {
   font-weight: 500;
   text-align: center;
 }
 
-iframe {
-  display: block;
-  margin: 20px auto;
-}
-
 p {
   text-align: center;
   font-weight: 200;
+}
+
+/* Media */
+iframe {
+  display: block;
+  margin: 20px auto;
 }
 
 img {
@@ -34,11 +47,13 @@ img {
   display: block;
 }
 
+/* Map */
 #map {
   height: 400px;
   width: 500px;
 }
 
+/* Navigation Links */
 nav a:link,
 nav a:visited,
 nav a:active,
@@ -57,12 +72,7 @@ nav a {
   border-radius: 12px;
 }
 
-nav a:link,
-nav a:visited {
-  color: #f5f5f7;
-  background: transparent;
-}
-
+/* Active Nav */
 nav a.active,
 #cta.active {
   background-color: #ffe600;
@@ -70,6 +80,7 @@ nav a.active,
   border-radius: 12px;
 }
 
+/* Hover Underline */
 nav a::after {
   content: "";
   position: absolute;
@@ -90,9 +101,11 @@ nav a.active::after {
   width: 0%;
 }
 
+/* CTA Button */
 button#cta {
   font-size: 1rem !important;
 }
+
 #cta {
   position: relative;
   background-color: #3d945d00;
@@ -105,7 +118,7 @@ button#cta {
   overflow: visible;
 }
 
-/* animated border */
+/* CTA Animation */
 #cta .border-svg {
   position: absolute;
   top: 0;
@@ -139,6 +152,7 @@ button#cta {
   stroke-dashoffset: 0;
 }
 
+/* Animation Keyframes */
 @keyframes traceBorder {
   0% {
     stroke-dashoffset: var(--perimeter);
@@ -148,6 +162,7 @@ button#cta {
   }
 }
 
+/* Footer */
 footer {
   border-top: 1px solid rgba(245, 245, 247, 0.12);
   padding: 18px 16px;
@@ -155,6 +170,7 @@ footer {
   color: rgba(245, 245, 247, 0.72);
 }
 
+/* Tables */
 #ticketprice th {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -162,10 +178,11 @@ footer {
 }
 
 #ticketprice tr:nth-child(even) td {
-  background-color: #f2f2f2;
+  background-color: #ffe600;
   color: #0b0b0c;
 }
 
+/* Forms */
 form {
   margin: auto;
   text-align: center;
@@ -175,6 +192,7 @@ form {
   display: none;
 }
 
+/* Layout Grid */
 .map-section {
   display: grid;
   grid-template-columns: 2fr 1.5fr;
@@ -190,6 +208,7 @@ form {
   align-items: left;
 }
 
+/* Slideshow */
 .slide {
   width: 100%;
   height: auto;
@@ -219,6 +238,7 @@ form {
   right: 10px;
 }
 
+/* Page Containers */
 .container-home {
   display: grid;
   grid-template-areas:
@@ -229,7 +249,8 @@ form {
     "footer";
 }
 
-.container-exhibit {
+.container-exhibit,
+.container-exhibitions {
   display: grid;
   grid-template-areas:
     "header"
@@ -248,15 +269,7 @@ form {
     "footer";
 }
 
-.container-exhibitions {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "nav_bar"
-    "main"
-    "footer";
-}
-
+/* Layout Areas */
 .header {
   grid-area: header;
   place-items: center;
@@ -299,11 +312,14 @@ form {
   grid-area: footer;
 }
 
+/* Mobile Nav */
 .nav_bar .icon {
   display: none;
 }
 
+/* Responsive */
 @media only screen and (max-width: 800px) {
+  /* Layout */
   .main-content {
     flex-direction: column;
     gap: 20px;
@@ -314,11 +330,13 @@ form {
     width: 100%;
   }
 
+  /* Mobile Nav */
   .nav_bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   .nav_bar a {
     display: none;
   }
@@ -349,6 +367,7 @@ form {
     align-self: flex-end;
   }
 
+  /* CTA Mobile */
   #cta .border-svg {
     display: none;
   }
@@ -360,30 +379,25 @@ form {
     color: #f5f5f7;
   }
 
+  /* Mobile Layout */
   .exhibit {
     grid-template-columns: 1fr;
     place-items: center;
   }
 
-  .slide {
-    width: 100%;
-    height: auto;
-    display: none;
-  }
-
+  /* Images */
   img {
     max-width: 100%;
     height: auto;
   }
 
+  /* Map Mobile */
   #map {
     width: 100%;
     max-width: 100%;
   }
 
-  @media (max-width: 800px) {
-    .map-section {
-      grid-template-columns: 1fr;
-    }
+  .map-section {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- jQuery Library (used for DOM manipulation and event handling)
+     Source: https://jquery.com/ -->
     <script
       src="https://code.jquery.com/jquery-4.0.0.min.js"
       integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
@@ -8,12 +10,17 @@
     ></script>
     <script src="../static/script.js" defer></script>
     <link rel="stylesheet" href="../static/style.css" />
+
+    <!-- Google Fonts (used for typography: Roboto, Nunito, Geologica)
+     Source: https://fonts.google.com/ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
       rel="stylesheet"
     />
+    <!-- Leaflet.js (used for interactive maps)
+     Source: https://leafletjs.com/ -->
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -36,6 +43,7 @@
   </head>
   <div class="container-explore">
     <body>
+      <!-- Header -->
       <header class="header">
         <img
           id="logo"
@@ -45,6 +53,8 @@
           height="67px"
         />
       </header>
+
+      <!-- Navigation -->
       <nav class="nav_bar" id="navbar">
         <a href="../index.html">Home</a>
         <a href="explore.html">Explore</a>
@@ -55,12 +65,16 @@
         </a>
         <!-- <a href="checkout.html">Checkout</a> -->
       </nav>
+
+      <!-- Main Content -->
       <main class="main">
+        <!-- Hero Image -->
         <img
           src="../static/MonoMuseExterior.png"
-          alt="Exterior of MonoMuse"
-          
+          alt="Exterior of MonoMuse Metallica Museum in Los Angeles, CA"
         />
+
+        <!-- Map Section -->
         <div class="map-section">
           <div class="map-info">
             <h2>Visit MonoMuse</h2>
@@ -70,28 +84,29 @@
             <p><strong>Hours:</strong> Mon–Sun: 10AM – 6PM</p>
             <p><strong>Contact:</strong> info@monomuse.com</p>
           </div>
-
           <div id="map"></div>
         </div>
+
+        <!-- Mission -->
         <h2>Our Mission</h2>
         <p>
-          At MonoMuse, our mission is to explore the dynamic relationship
-          between art, technology, and human creativity. We are dedicated to
-          showcasing innovative exhibitions that challenge traditional notions
-          of art and inspire visitors to engage with the transformative power of
-          digital innovation. Through immersive experiences, interactive
-          installations, and thought-provoking programming, we aim to foster a
-          deeper understanding of how technology is shaping culture and everyday
-          life. MonoMuse is a space for discovery, creativity, and connection,
-          where visitors can explore new perspectives on the role of technology
-          in art and society.
+          At MonoMuse, our mission is to celebrate the legacy, influence, and
+          evolution of Metallica, exploring how their music has shaped culture
+          and redefined the boundaries of heavy metal. We are dedicated to
+          showcasing immersive exhibitions that highlight the band’s journey,
+          from their thrash metal roots to their global impact. Through
+          interactive experiences, live-performance simulations, and multimedia
+          storytelling, we aim to engage visitors with the energy, innovation,
+          and artistry that define Metallica. MonoMuse is a space for fans and
+          newcomers alike to connect with the band's music, history, and
+          enduring influence on the world of rock and beyond.
         </p>
         <br></br>
+
+        <!-- Milestones -->
         <h2>Milestones</h2>
         <ul>
-          <li>
-            2020: MonoMuse Grand Opening
-          </li>
+          <li>2020: MonoMuse Grand Opening</li>
           <li>
             2021: Launch of the first Metallica-themed interactive exhibition
           </li>
@@ -104,13 +119,17 @@
             cultural impact
           </li>
           <li>
-            2024: Renovation of digital and multimedia installations for a
-            fully immersive museum experience
+            2024: Renovation of digital and multimedia installations for a fully
+            immersive museum experience
           </li>
         </ul>
       </main>
+
+      <!-- Spotify Section -->
       <div class="spotify-section">
         <h2>Listen to Metallica</h2>
+
+        <!-- Spotify -->
         <iframe
           src="https://open.spotify.com/embed/artist/2ye2Wgw4gimLv2eAKyk1NB"
           width="100%"
@@ -120,6 +139,8 @@
         >
         </iframe>
       </div>
+
+      <!-- Footer -->
       <footer>
         <span>&copy;</span>
         <span id="copyYear"></span>

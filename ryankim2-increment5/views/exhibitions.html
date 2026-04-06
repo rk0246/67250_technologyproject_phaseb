@@ -1,18 +1,22 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- jQuery Library (used for DOM manipulation and event handling)
+     Source: https://jquery.com/ -->
     <script
       src="https://code.jquery.com/jquery-4.0.0.min.js"
       integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
       crossorigin="anonymous"
     ></script>
     <script src="../static/script.js" defer></script>
-
     <link rel="stylesheet" href="../static/style.css" />
+
+    <!-- Google Fonts (used for typography: Roboto, Nunito, Geologica)
+     Source: https://fonts.google.com/ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
       rel="stylesheet"
     />
     <meta name="author" content="Ryan Kim" />
@@ -27,6 +31,7 @@
   </head>
   <body>
     <div class="container">
+      <!-- Header -->
       <header class="header">
         <img
           id="logo"
@@ -36,6 +41,8 @@
           height="67px"
         />
       </header>
+
+      <!-- Navigation -->
       <nav class="nav_bar" id="navbar">
         <a href="../index.html">Home</a>
         <a href="explore.html">Explore</a>
@@ -46,7 +53,10 @@
         </a>
         <!-- <a href="checkout.html">Checkout</a> -->
       </nav>
+
+      <!-- Main Content -->
       <main class="main">
+        <!-- Exhibition 1 -->
         <div class="exhibit">
           <div class="exhibit-text">
             <h3>Exhibition 1: The Black Album Controversy</h3>
@@ -66,12 +76,15 @@
               backlash.
             </p>
           </div>
+
+          <!-- Exhibit Image -->
           <figure>
             <img src="../static/black-album.jpg" alt="Metallica Black Album" />
             <figcaption>The Black Album (1991)</figcaption>
           </figure>
         </div>
 
+        <!-- Exhibition 2 -->
         <div class="exhibit">
           <div class="exhibit-text">
             <h3>Exhibition 2: Global Impact and Legacy</h3>
@@ -90,6 +103,8 @@
               all time.
             </p>
           </div>
+
+          <!-- Exhibit Image -->
           <figure>
             <img
               src="../static/metallica-members.jpg"
@@ -99,6 +114,8 @@
             <figcaption>Metallica Members</figcaption>
           </figure>
         </div>
+
+        <!-- Footer -->
         <footer class="footer">
           <span>&copy;</span>
           <span id="copyYear"></span>

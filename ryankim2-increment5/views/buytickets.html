@@ -1,11 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script
-      src="https://code.jquery.com/jquery-4.0.0.min.js"
-      integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
-      crossorigin="anonymous"
-    ></script>
+    <!-- jQuery Library (used for DOM manipulation and event handling)
+     Source: https://jquery.com/ -->
     <script
       src="https://code.jquery.com/jquery-4.0.0.min.js"
       integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
@@ -13,10 +10,13 @@
     ></script>
     <script src="../static/script.js" defer></script>
     <link rel="stylesheet" href="../static/style.css" />
+
+    <!-- Google Fonts (used for typography: Roboto, Nunito, Geologica)
+     Source: https://fonts.google.com/ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap"
       rel="stylesheet"
     />
     <meta name="author" content="Ryan Kim" />
@@ -31,6 +31,7 @@
   </head>
   <div class="container">
     <body>
+      <!-- Header -->
       <header class="header">
         <img
           id="logo"
@@ -40,6 +41,8 @@
           height="67px"
         />
       </header>
+
+      <!-- Navigation -->
       <nav class="nav_bar" id="navbar">
         <a href="../index.html">Home</a>
         <a href="explore.html">Explore</a>
@@ -50,8 +53,12 @@
         </a>
         <!-- <a href="checkout.html">Checkout</a> -->
       </nav>
+
+      <!-- Main Content -->
       <main class="main">
+        <!-- Ticket Layout -->
         <div class="main-content">
+          <!-- Calendar -->
           <div class="calendar">
             <table id="ticketcalendar">
               <caption>
@@ -113,6 +120,8 @@
               </tr>
             </table>
           </div>
+
+          <!-- Pricing Table -->
           <div class="ticket-table">
             <table id="ticketprice">
               <tr>
@@ -141,7 +150,11 @@
             </table>
           </div>
         </div>
+
+        <!-- Checkout Button -->
         <button onclick="showCheckout()">Buy Now</button>
+
+        <!-- Checkout Form -->
         <form id="checkoutForm">
           <label>
             Name (required)
@@ -190,13 +203,19 @@
           </label>
           <br /><br />
 
+          <!-- Total -->
           <p>Total: $<span id="totalPrice">0</span></p>
+
+          <!-- Errors -->
           <p id="errorMsg" style="color: red"></p>
 
+          <!-- Submit -->
           <button type="submit">Place Order</button>
         </form>
       </main>
     </body>
+
+    <!-- Footer -->
     <footer>
       <span>&copy;</span>
       <span id="copyYear"></span>
