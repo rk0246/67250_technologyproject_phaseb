@@ -400,4 +400,26 @@ form {
   .map-section {
     grid-template-columns: 1fr;
   }
+
+  /* Horizontal scrolling for the tabels */
+  #ticketcalendar,
+  #ticketprice {
+    font-size: 12px;
+  }
+
+  #ticketcalendar th,
+  #ticketcalendar td,
+  #ticketprice th,
+  #ticketprice td {
+    padding: 4px;
+  }
+
+  #ticketprice td {
+    word-wrap: break-word;
+  }
+
+  #ticketcalendar th,
+  #ticketprice th {
+    font-size: 11px;
+  }
 }
